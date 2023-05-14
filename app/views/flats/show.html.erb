@@ -1,0 +1,25 @@
+<div class="navbar navbar-dark bg-dark box-shadow">
+  <div class="container d-flex justify-content-between">
+    <a href="#" class="navbar-brand d-flex align-items-center">
+      <strong> Apartment Rentals</strong>
+        <%= link_to "Back to Main Menu", flats_path, class:"btn btn-primary my-2" %>
+
+  </div>
+  </div>
+
+  <main role="main">
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="display-4"><%= @flat.name  %></h1>
+        <p class="lead">Address: <%= @flat.address %></p>
+        <p class="lead">Price: $<%= @flat.price_per_night %></p>
+        <a href="#" class="btn btn-primary">Book Now</a>
+      </div>
+    </section>
+    <section class="card">
+      <div class="card-body">
+        <img class="card-img-top" src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Card image cap">
+        <p class="card-text"><%= @flat.description %></p>
+      </div>
+    </section>
+  </main>
