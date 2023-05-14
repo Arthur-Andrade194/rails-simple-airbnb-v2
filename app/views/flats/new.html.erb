@@ -1,0 +1,39 @@
+
+<div class="navbar navbar-dark bg-dark box-shadow">
+  <div class="container d-flex justify-content-between">
+    <a href="#" class="navbar-brand d-flex align-items-center">
+      <strong> Apartment Rentals</strong>
+        <%= link_to "Back to Main Menu", flats_path, class:"btn btn-primary my-2" %>
+
+  </div>
+  </div>
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Create your apartment</h1>
+      <p class="lead text-muted">Please fill the form</p>
+      <p>
+        <%= link_to "View All Apartments", flats_path, class:"btn btn-primary my-2" %>
+      </p>
+    </div>
+  </section>
+
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <%= simple_form_for(@flat) do |f|  %>
+          <%= f.input :name %>
+          <%= f.input :address %>
+          <%= f.input :description %>
+          <%= f.input :price_per_night %>
+          <%= f.input :number_of_guests %>
+          <%= f.submit %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+</main>
